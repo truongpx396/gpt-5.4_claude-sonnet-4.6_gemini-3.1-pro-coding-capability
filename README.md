@@ -61,6 +61,7 @@ Each file was generated in a **dedicated, clean, fresh context** — a separate 
 - No shared context window could leak style, structure, or decisions between contenders.
 - No custom system prompt steered any model toward or away from particular patterns.
 - The reviewer (Sonnet 4.7) received only the raw files — no hints about which model wrote which file.
+- **File name postfixes** (`_gpt-5.4`, `_claude-sonet-4.6`, `_gemini-3.1-pro`) were applied **only after all verdicts were finalized** — during generation and review the files were identified by number only (`todo_1_`, `todo_2_`, `todo_3_`). Attribution was added retrospectively for readability.
 
 The goal was to eliminate as many sources of bias as possible: anchoring bias (seeing one solution before writing another), context bleed, and model self-favoritism.
 
