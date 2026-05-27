@@ -45,7 +45,7 @@ All three contender models were accessed through **GitHub Copilot**, each on its
 
 \* Measured during this test — each task produced ~100 lines / ~700 output tokens. Claude Sonnet 4.6 was the fastest by a clear margin, arriving ~42% faster than GPT-5.4 and ~13% faster than Gemini 3.1 Pro. In practice this means the difference between a 20-second wait and a 29-second wait — noticeable but not decisive for one-shot generation. It would compound significantly in agentic loops with many sequential calls.
 
-The verdicts themselves — the senior-reviewer pass over each output — were produced by **Claude Sonnet 4.7 with the 1M-token context window**, running inside Claude Code. That model never wrote any of the code being judged; it only read and graded.
+The verdicts themselves — the senior-reviewer pass over each output — were produced by **Claude Opus 4.7 with the 1M-token context window**, running inside Claude Code. That model never wrote any of the code being judged; it only read and graded.
 
 The prompt given to the review model was identical for every scenario, with only the folder name swapped:
 
@@ -60,7 +60,7 @@ Each file was generated in a **dedicated, clean, fresh context** — a separate 
 - No model saw another model's output before or during generation.
 - No shared context window could leak style, structure, or decisions between contenders.
 - No custom system prompt steered any model toward or away from particular patterns.
-- The reviewer (Sonnet 4.7) received only the raw files — no hints about which model wrote which file.
+- The reviewer (Opus 4.7) received only the raw files — no hints about which model wrote which file.
 - **File name postfixes** (`_gpt-5.4`, `_claude-sonet-4.6`, `_gemini-3.1-pro`) were applied **only after all verdicts were finalized** — during generation and review the files were identified by number only (`todo_1_`, `todo_2_`, `todo_3_`). Attribution was added retrospectively for readability.
 
 The goal was to eliminate as many sources of bias as possible: anchoring bias (seeing one solution before writing another), context bleed, and model self-favoritism.
@@ -308,4 +308,4 @@ For a one-shot coding task in Copilot today:
 
 The context-size advantage GPT-5.4 has on paper (400k vs 160k/173k) didn't change anything in this test — every task fit in a few hundred tokens. Where it would matter is multi-file refactors and long agentic loops, neither of which this exercise touched.
 
-And finally: the verdicts were produced by **Sonnet 4.7 (1M context, via Claude Code)** — a stronger model used deliberately to judge weaker ones. The principle is simple: if you want an honest code review, you ask a better reviewer. Sonnet 4.7 was not a contender in this test; it was the judge. Using a model to evaluate its own output — or outputs from peers at the same capability tier — tends to produce charitable, undifferentiated feedback. Stepping up a generation removes that bias.
+And finally: the verdicts were produced by **Opus 4.7 (1M context, via Claude Code)** — a stronger model used deliberately to judge weaker ones. The principle is simple: if you want an honest code review, you ask a better reviewer. Opus 4.7 was not a contender in this test; it was the judge. Using a model to evaluate its own output — or outputs from peers at the same capability tier — tends to produce charitable, undifferentiated feedback. Stepping up a generation removes that bias.
