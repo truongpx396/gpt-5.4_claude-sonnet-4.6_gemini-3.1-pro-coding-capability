@@ -37,7 +37,7 @@ That's it. No spec, no list of endpoints, no hints about validation, CORS, REST 
 
 All three contender models were accessed through **GitHub Copilot**, each on its default reasoning setting:
 
-| Model | Reasoning mode | Context window | Generation speed* | Access |
+| Model | Reasoning mode | Context window | Generation speed (Including reasoning time)  | Access |
 |---|---|---|---|---|
 | **GPT-5.4** | medium (default) | **400k** | ~24 tok/s | GitHub Copilot |
 | **Claude Sonnet 4.6** | medium | **160k** | ~34 tok/s | GitHub Copilot |
