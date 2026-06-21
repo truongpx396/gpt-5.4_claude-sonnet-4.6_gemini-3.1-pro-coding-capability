@@ -1,4 +1,4 @@
-# 🤖 GPT-5.4 vs Claude Sonnet 4.6 vs Gemini 3.1 Pro — Coding Capability in Four Real Scenarios
+# 🤖 GPT-5.4 vs Claude Sonnet 4.6 vs Gemini 3.1 Pro — Evaluate Agent Coding's Behavior in Four Test Scenarios
 
 A head-to-head comparison of three frontier coding models writing the *same* small product from scratch — a TODO REST API plus a TODO UI — in four stacks: Go, Python, Node.js (vanilla `http`), and React + TypeScript.
 
